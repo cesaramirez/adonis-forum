@@ -8,10 +8,7 @@
     "start": "node server.js",
     "test": "node ace test"
   },
-  "keywords": [
-    "adonisjs",
-    "adonis-app"
-  ],
+  "keywords": ["adonisjs", "adonis-app"],
   "author": "",
   "license": "UNLICENSED",
   "private": true,
@@ -25,9 +22,16 @@
     "@adonisjs/ignitor": "^1.0.14",
     "@adonisjs/lucid": "^4.0.24",
     "@adonisjs/session": "^1.0.19",
-    "@adonisjs/shield": "^1.0.4"
+    "@adonisjs/shield": "^1.0.4",
+    "bulma": "^0.6.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.7",
+    "webpack": "^3.0.0"
+  },
   "autoload": {
     "App": "./app"
   }
