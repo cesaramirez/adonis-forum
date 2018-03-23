@@ -14,6 +14,14 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="field is-grouped">
+        @loggedIn
+          <p class="control">
+          <form action="" method="POST"></form>
+            <button class="button is-dark" type="submit">
+              <span>Logout</span>
+            </button>
+          </p>
+          @else
           <p class="control">
             <a class="button is-dark" href="{{ route('auth.register') }}">
               <span>
@@ -26,6 +34,7 @@
               <span>Login</span>
             </a>
           </p>
+          @endloggedIn
         </div>
       </div>
     </div>
