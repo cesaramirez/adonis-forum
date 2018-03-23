@@ -15,6 +15,7 @@
                   <input
                     class="input is-large {{ hasErrorFor('email') ? 'is-danger' : '' }}"
                     type="email"
+                    name="email"
                     placeholder="Your Email"
                     autofocus
                     value="{{ old('email', '') }}">
@@ -29,6 +30,7 @@
                   <input
                     class="input is-large {{ hasErrorFor('username') ? 'is-danger' : '' }}"
                     type="text"
+                    name="username"
                     placeholder="Choose a username"
                     value="{{ old('username', '') }}">
                   @if(hasErrorFor('username'))
@@ -42,6 +44,7 @@
                   <input
                     class="input is-large {{ hasErrorFor('password') ? 'is-danger' : '' }}"
                     type="password"
+                    name="password"
                     placeholder="Choose a Password">
                   @if(hasErrorFor('password'))
                     <p class="help is-danger">{{ getErrorFor('password') }}</p>

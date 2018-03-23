@@ -1,5 +1,6 @@
 "use strict";
 const { validateAll } = use("Validator");
+const User = use("App/Models/User");
 
 class RegisterController {
   index({ view }) {
@@ -21,6 +22,18 @@ class RegisterController {
 
       return response.redirect("back");
     }
+
+    const user = new User();
+
+    user.fill({
+      email,
+      username,
+      password
+    });
+
+    await user.save();
+
+    return response.route("home");
   }
 }
 
