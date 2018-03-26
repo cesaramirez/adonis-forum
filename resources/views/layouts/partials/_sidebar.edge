@@ -1,0 +1,13 @@
+<a class="button is-primary is-block is-alt is-large" href="#">New Post</a>
+<aside class="menu">
+  <p class="menu-label">
+    Tags
+  </p>
+  <ul class="menu-list">
+  @each(tag in tags.toJSON())
+    <li>
+      <a>{{ tag.name }}</a>
+    </li>
+  @endeach
+  </ul>
+</aside>
