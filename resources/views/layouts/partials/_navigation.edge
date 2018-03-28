@@ -1,43 +1,50 @@
-<nav class="navbar is-dark top-nav">
-<div class="container">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="https://adonisjs.com">
-      <img src="https://adonisjs.com//images/header-logo.svg" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
-    </a>
-    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
+<nav class="navbar is-white topNav">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="https://steemitimages.com/0x0/https://bulma.io/images/bulma-logo.png" width="112" height="28">
+        </a>
+        <div class="navbar-burger burger" data-target="topNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
 
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="field is-grouped">
-        @loggedIn
-          <p class="control">
-          <form action="" method="POST"></form>
-            <button class="button is-dark" type="submit">
-              <span>Logout</span>
-            </button>
-          </p>
-          @else
-          <p class="control">
-            <a class="button is-dark" href="{{ route('auth.register') }}">
-              <span>
-                Register
-              </span>
-            </a>
-          </p>
-          <p class="control">
-            <a class="button is-dark" href="{{ route('auth.login') }}">
-              <span>Login</span>
-            </a>
-          </p>
-          @endloggedIn
+      <div id="topNav" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="forum.html">
+            Home
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              @loggedIn
+              <p class="control">
+                <a class="button is-small is-info is-outlined">
+                  <span class="icon">
+                    <i class="fa fa-user"></i>
+                  </span>
+                  <span>Logout</span>
+                </a>
+              </p>
+              @else
+              <p class="control">
+                <a class="button" href="{{ route('auth.register') }}">
+                    Register
+                </a>
+              </p>
+              <p class="control">
+                <a class="button is-info" href="{{ route('auth.login') }}">
+                  Login
+                </a>
+              </p>
+              @endloggedIn
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  </div>
-</nav>
+  </nav>

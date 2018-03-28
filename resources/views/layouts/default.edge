@@ -8,16 +8,17 @@
   {{ css('app') }}
 </head>
 <body>
-  @include('layouts/partials/_navigation')
+  @include('layouts.partials._navigation')
+  @include('forum.partials._navigation')
   <div class="container">
-  <div class="columns">
-    <div class="column is-3">
-      @include('layouts.partials._sidebar')
+    <div class="columns">
+      <div class="column is-3">
+        @include('forum.partials._sidebar')
+      </div>
+      <div class="column is-9">
+        @!section('content')
+      </div>
     </div>
-    <div class="column is-9">
-      @!section('content')
-    </div>
-  </div>
   </div>
 </body>
 </html>

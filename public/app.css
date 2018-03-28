@@ -1,4 +1,4 @@
-@keyframes spinAround {
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);@keyframes spinAround {
   from {
     transform: rotate(0deg); }
   to {
@@ -6509,3 +6509,60 @@ label.panel-block {
 .footer {
   background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem; }
+
+html,
+body {
+  font-family: "Open Sans", serif;
+  background: #f2f6fa; }
+
+footer {
+  background-color: #f2f6fa !important; }
+
+.topNav {
+  border-top: 5px solid #3498db; }
+
+.topNav .container {
+  border-bottom: 1px solid #e6eaee; }
+
+.container .columns {
+  margin: 3rem 0; }
+
+.navbar-menu .navbar-item {
+  padding: 0 2rem; }
+
+aside.menu {
+  padding-top: 3rem; }
+
+aside.menu .menu-list {
+  line-height: 1.5; }
+
+aside.menu .menu-label {
+  padding-left: 10px;
+  font-weight: 700; }
+
+.button.is-primary.is-alt {
+  background: #00c6ff;
+  background: -webkit-linear-gradient(to bottom, #0072ff, #00c6ff);
+  background: linear-gradient(to bottom, #0072ff, #00c6ff);
+  font-weight: 700;
+  font-size: 14px;
+  height: 3rem;
+  line-height: 2.8; }
+
+.media-left img {
+  border-radius: 50%; }
+
+.media-content p {
+  font-size: 14px;
+  line-height: 2.3;
+  font-weight: 700;
+  color: #8f99a3; }
+
+article.post {
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e6eaee; }
+
+article.post:last-child {
+  padding-bottom: 0;
+  border-bottom: none; }

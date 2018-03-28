@@ -1,21 +1,25 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+const extractSass = new ExtractTextPlugin({
+  filename: "public/app.css"
+});
+
+function sassRules() {
+  return [
+    {
+      test: /\.(sass|scss)$/,
+      loader: extractSass.extract(["css-loader", "sass-loader"])
+    }
+  ];
+}
+
 module.exports = {
-  entry: ["./resources/styles/app.scss"],
+  entry: ["./resources/assets/sass/app.scss"],
   output: {
     filename: "public/app.js"
   },
   module: {
-    rules: [
-      {
-        test: /\.(sass|scss)$/,
-        loader: ExtractTextPlugin.extract(["css-loader", "sass-loader"])
-      }
-    ]
+    rules: sassRules()
   },
-  plugins: [
-    new ExtractTextPlugin({
-      filename: "public/app.css"
-    })
-  ]
+  plugins: [extractSass]
 };
